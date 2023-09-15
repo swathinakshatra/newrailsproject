@@ -27,7 +27,6 @@ module.exports = {
   },
    redisSETEX : async (key,expiryInSeconds,data) => {
     try {
-     
       const result = await client.setEx(key,expiryInSeconds,data);
       console.log(result);
       return result;
