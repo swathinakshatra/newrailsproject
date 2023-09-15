@@ -6,19 +6,10 @@ const adminControlsSchema = new mongoose.Schema({
   Transfer: { type: String, required: true, default: "Enable" },
   referral_one: {
     status: { type: String, required: true, default: 'Enable' },
-    level: { type: String, required: true, default: 1 },
+    level: { type: String, required: true },
     percentage: { type: Number, required: true, default: 10 } 
   },
-  referral_two: {
-    status: { type: String, required: true, default: 'Enable'},
-    level: { type: String, required: true, default: 2 },
-    percentage: { type: Number, required: true, default: 20 } 
-  },
-  referral_three: {
-    status: { type: String, required: true, default: 'Enable' },
-    level: { type: String, required: true, default: 3 },
-    percentage: { type: Number, required: true, default: 30 } 
-  },
+  
   coins: { type: Array, default: [] }
 });
 

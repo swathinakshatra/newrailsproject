@@ -6,7 +6,7 @@ const admin=require('../routes/Admin');
 const users=require('../routes/users');
 
 module.exports=function(app){
-app.get('/home', async (req, res) => {
+app.get('/', async (req, res) => {
 return res.status(200).send('RAILS Admin Home route')});
 app.use(express.json());
 app.use('/api/admincontrols',admincontrols,queue({activelimit:1,queuedlimit:-1}));
